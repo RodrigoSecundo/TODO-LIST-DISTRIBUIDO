@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Multi API TodoList</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header class="hero">
+            <div>
+                <p class="eyebrow">Sistema distribuído</p>
+                <h1>Multi API TodoList</h1>
+                <p class="subtitle">Autenticação, tarefas isoladas por usuário, logs centralizados e estatísticas
+                    analíticas.</p>
+            </div>
+            <div id="userPanel" class="user-panel hidden">
+                <p id="userName"></p>
+                <button id="logoutButton" type="button" class="secondary-button">Sair</button>
+            </div>
+        </header>
+
+        <div class="grid">
+            <div class="card auth-card">
+                <h2>Acesso</h2>
+                <div class="tabs">
+                    <button id="showLogin" class="tab active" type="button">Entrar</button>
+                    <button id="showRegister" class="tab" type="button">Cadastrar</button>
+                </div>
+
+                <form id="loginForm" class="auth-form">
+                    <input type="email" id="loginEmail" placeholder="Email" required>
+                    <input type="password" id="loginPassword" placeholder="Senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <form id="registerForm" class="auth-form hidden">
+                    <input type="text" id="registerName" placeholder="Nome" required>
+                    <input type="email" id="registerEmail" placeholder="Email" required>
+                    <input type="password" id="registerPassword" placeholder="Senha" minlength="6" required>
+                    <button type="submit">Criar conta</button>
+                </form>
+
+                <p id="authMessage" class="message"></p>
+            </div>
+
+            <div id="todoSection" class="workspace hidden">
+                <div class="card">
+                    <h2>Nova Tarefa</h2>
+                    <form id="todoForm">
+                        <input type="text" id="title" placeholder="Título" required>
+                        <textarea id="description" placeholder="Descrição"></textarea>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </div>
+
+                <div class="card">
+                    <h2>Lista de Tarefas</h2>
+                    <ul id="todoList"></ul>
+                </div>
+
+                <div class="card stats-card">
+                    <h2>Estatísticas</h2>
+                    <p>Total: <span id="total">0</span></p>
+                    <p>Concluídas: <span id="completed">0</span></p>
+                    <p>Pendentes: <span id="pending">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <p id="todoMessage" class="message"></p>
+
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+backend/task-service/node_modules/
+backend/task-service/dev.db
+backend/task-service/dev.db-journal
+backend/task-service/.env
+backend/log-service/vendor/
+backend/log-service/.env
+backend/log-service/database/
+backend/analytics-service/.env
+backend/analytics-service/.venv/
+backend/analytics-service/__pycache__/
+backend/analytics-service/app/__pycache__/
+backend/analytics-service/app/models/__pycache__/
+backend/analytics-service/app/routers/__pycache__/
+backend/analytics-service/app/schemas/__pycache__/
+backend/analytics-service/app/services/__pycache__/
+backend/analytics-service/analytics.db
